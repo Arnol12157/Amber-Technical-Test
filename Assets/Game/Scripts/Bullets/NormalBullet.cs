@@ -1,11 +1,10 @@
-using System;
-using System.Collections.Generic;
-using Game.Scripts.Enemies;
 using Game.Scripts.Interfaces;
 using UnityEngine;
 
 namespace Game.Scripts.Bullets
 {
+    using Base;
+    
     public class NormalBullet : BulletBase
     {
         [SerializeField] private BulletModel _bulletModel;
@@ -29,11 +28,12 @@ namespace Game.Scripts.Bullets
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<IDamageable>() != null && other.GetComponent<Base.Base>() == null)
+            if (other.TryGetComponent<IDamageable>(out var damageable) && !other.TryGetComponent<Base>(out _))
             {
-                other.GetComponent<IDamageable>().DoDamage(_data.DamageAmount);
+                damageable.DoDamage(_data.DamageAmount);
                 _objectPooling.ReleaseObject(gameObject);
             }
+
         }
     }
 }

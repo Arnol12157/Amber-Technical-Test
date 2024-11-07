@@ -1,9 +1,6 @@
-using System;
 using System.Collections.Generic;
 using Game.Scripts.DependencyInjection;
-using Game.Scripts.Economy;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
 
 namespace Game.Scripts.SpawnSystem

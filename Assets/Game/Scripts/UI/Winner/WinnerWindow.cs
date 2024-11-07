@@ -1,9 +1,10 @@
-using UnityEngine;
-
-public class WinnerWindow : Window
+namespace Game.Scripts.UI.Winner
 {
-    public override void Start()
+    public class WinnerWindow : Window
     {
-        base.Start();
+        public override void Start()
+        {
+            base.Start();
+        }
     }
 }

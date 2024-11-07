@@ -1,5 +1,6 @@
 using System.Collections;
 using Game.Scripts.Bullets;
+using Game.Scripts.GameLogic;
 using Game.Scripts.Interfaces;
 using UnityEngine;
 
@@ -39,8 +40,7 @@ namespace Game.Scripts.Turrets
                 return;
             }
 
-            GameObject bullet = _spawnSystem.SpawnOnPosition(ObjectPoolModel.PoolType.NormalBullet,
-                transform.position);
+            GameObject bullet = _spawnSystem.SpawnOnPosition(ObjectPoolModel.PoolType.NormalBullet, transform.position);
             bullet.GetComponent<IBullet>().Shoot();
         }
 

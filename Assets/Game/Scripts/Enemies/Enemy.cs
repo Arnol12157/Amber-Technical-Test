@@ -1,5 +1,7 @@
 using Game.Scripts.Economy;
+using Game.Scripts.GameLogic;
 using Game.Scripts.Interfaces;
+using Game.Scripts.UI;
 using Game.Scripts.UI.HealthBar;
 using UnityEngine;
 
@@ -66,9 +68,9 @@ namespace Game.Scripts.Enemies
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.GetComponent<IDamageable>() != null)
+            if (other.TryGetComponent<IDamageable>(out var damageable))
             {
-                other.gameObject.GetComponent<IDamageable>().DoDamage(_data.DamageToBase);
+                damageable.DoDamage(_data.DamageToBase);
                 _objectPooling.ReleaseObject(gameObject);
             }
         }

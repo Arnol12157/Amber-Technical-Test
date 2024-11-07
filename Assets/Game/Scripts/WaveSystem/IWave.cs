@@ -1,6 +1,6 @@
 namespace Game.Scripts.WaveSystem
 {
-    public interface Wave
+    public interface IWave
     {
         void Generate();
     }

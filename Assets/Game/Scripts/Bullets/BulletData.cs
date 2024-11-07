@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using Game.Scripts.Spawnables;
 using UnityEngine;
 
 namespace Game.Scripts.Bullets

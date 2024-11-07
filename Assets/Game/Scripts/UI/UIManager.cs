@@ -1,41 +1,44 @@
-using System;
 using Game.Scripts.DependencyInjection;
 using Game.Scripts.Economy;
 using Game.Scripts.GameLogic;
+using Game.Scripts.UI.Hud;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour, IGameStateObserver
+namespace Game.Scripts.UI
 {
-    [Inject] private WindowGenerator _windowGenerator;
-    [Inject] private EconomyManager _economyManager;
-    [Inject] private GameManager _gameManager;
-
-    private void Start()
+    public class UIManager : MonoBehaviour, IGameStateObserver
     {
-        _economyManager.OnUpdateCoins += OnUpdateCoins;
-        _gameManager.SubscribeToGameStateChanges(this);
-    }
+        [Inject] private WindowGenerator _windowGenerator;
+        [Inject] private EconomyManager _economyManager;
+        [Inject] private GameManager _gameManager;
 
-    private void OnUpdateCoins(int coins)
-    {
-        GetHudWindow().UpdateCoinsView(coins);
-    }
-
-    public void OnGameStateUpdated(GameManager.GameState state)
-    {
-        switch (state)
+        private void Start()
         {
-            case GameManager.GameState.Lose:
-                _windowGenerator.ShowLoserWindow();
-                break;
-            case GameManager.GameState.Win:
-                _windowGenerator.ShowWinnerWindow();
-                break;
+            _economyManager.OnUpdateCoins += OnUpdateCoins;
+            _gameManager.SubscribeToGameStateChanges(this);
         }
-    }
 
-    public HudWindow GetHudWindow()
-    {
-        return _windowGenerator.GetHudWindow();
+        private void OnUpdateCoins(int coins)
+        {
+            GetHudWindow().UpdateCoinsView(coins);
+        }
+
+        public void OnGameStateUpdated(GameManager.GameState state)
+        {
+            switch (state)
+            {
+                case GameManager.GameState.Lose:
+                    _windowGenerator.ShowLoserWindow();
+                    break;
+                case GameManager.GameState.Win:
+                    _windowGenerator.ShowWinnerWindow();
+                    break;
+            }
+        }
+
+        public HudWindow GetHudWindow()
+        {
+            return _windowGenerator.GetHudWindow();
+        }
     }
 }

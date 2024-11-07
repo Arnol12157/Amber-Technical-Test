@@ -1,10 +1,11 @@
 ﻿using System.Reflection;
-using Game.Scripts.DependencyInjection;
 using Game.Scripts.Economy;
+using Game.Scripts.GameLogic;
 using Game.Scripts.Turrets;
+using Game.Scripts.UI;
 using UnityEngine;
 
-namespace Game.Scripts.GameLogic
+namespace Game.Scripts.DependencyInjection
 {
     using ServiceLocator;
     using SpawnSystem;

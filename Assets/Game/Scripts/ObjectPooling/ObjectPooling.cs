@@ -18,8 +18,8 @@ namespace Game.Scripts.ObjectPooling
 
         public Dictionary<ObjectPoolModel.PoolType, ObjectPool> Pools
         {
-            get { return _pools; }
-            set { _pools = value; }
+            get => _pools;
+            set => _pools = value;
         }
 
         private Dictionary<ObjectPoolModel.PoolType, ObjectPool> _pools = new();
@@ -56,7 +56,7 @@ namespace Game.Scripts.ObjectPooling
             obj.SetActive(false);
         }
 
-        public List<GameObject> GetPool(ObjectPoolModel.PoolType poolType, bool onlyActives)
+        private List<GameObject> GetPool(ObjectPoolModel.PoolType poolType, bool onlyActives)
         {
             if (!Pools.ContainsKey(poolType))
                 return new List<GameObject>();

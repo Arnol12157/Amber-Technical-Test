@@ -1,8 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using Game.Scripts.DependencyInjection;
 using Game.Scripts.Enemies;
-using Game.Scripts.SpawnSystem;
+using Game.Scripts.GameLogic;
 using UnityEngine;
 
 namespace Game.Scripts.WaveSystem

@@ -1,4 +1,3 @@
-using System;
 using Game.Scripts.Interfaces;
 using UnityEngine;
 using UnityEngine.UI;

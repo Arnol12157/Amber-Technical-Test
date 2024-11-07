@@ -1,9 +1,10 @@
-using UnityEngine;
-
-public class LoserWindow : Window
+namespace Game.Scripts.UI.Loser
 {
-    public override void Start()
+    public class LoserWindow : Window
     {
-        base.Start();
+        public override void Start()
+        {
+            base.Start();
+        }
     }
 }
