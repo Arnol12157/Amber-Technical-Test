@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b5834ab08649aa97d827edb3ea1ad6, type: 3}
+  m_Name: DefaultWave
+  m_EditorClassIdentifier: 
+  WaveData:
+  - WaveEnemy: {fileID: 11400000, guid: 86053a06a9d6c4e93b4564a64cdc46cf, type: 2}
+    WaveQuantity: 5
+    WaveDelay: 3
+  - WaveEnemy: {fileID: 11400000, guid: 86053a06a9d6c4e93b4564a64cdc46cf, type: 2}
+    WaveQuantity: 3
+    WaveDelay: 2
+  - WaveEnemy: {fileID: 11400000, guid: 2a2e42015374741efbc2dfe7a68c33f5, type: 2}
+    WaveQuantity: 4
+    WaveDelay: 1.5
+  - WaveEnemy: {fileID: 11400000, guid: 86053a06a9d6c4e93b4564a64cdc46cf, type: 2}
+    WaveQuantity: 3
+    WaveDelay: 3

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 508aba3d108f4d9f92cf4c885aef46ab, type: 3}
+  m_Name: Turrets List
+  m_EditorClassIdentifier: 
+  Turrets:
+  - {fileID: 11400000, guid: 7c4bdf3a1b5a041d2aebe32ee4498784, type: 2}
+  - {fileID: 11400000, guid: 4f3c8882c8b504c63ae47f71eab26550, type: 2}
